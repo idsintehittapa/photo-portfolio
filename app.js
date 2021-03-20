@@ -3,6 +3,9 @@
 // // This function resizes items individually
 // // from https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb
 
+
+/// https://w3bits.com/css-grid-masonry/
+
 function resizeGridItem(item){
   grid = document.getElementsByClassName("portfolio__masonry")[0]
   rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'))
