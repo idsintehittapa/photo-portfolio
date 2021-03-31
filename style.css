@@ -150,10 +150,23 @@ mark {
   text-align: left;
   font-size: 1rem;
   line-height: 2rem;
+  max-width: 25rem;
+  min-width: 20rem;
+  /* flex-direction: column; */
+}
+
+.portfolio__carousel-container {
+  margin: auto;
+  overflow: hidden;
+}
+
+.portfolio__carousel-slide {
+  display: flex;
+  width: 100%;
 }
 
 .portfolio__content img,
-.portfolio__content video {
+.portfolio__carousel-container video {
   width: 100%;
   margin: 0 10px 10px 10px;
   display: flex;
@@ -161,6 +174,26 @@ mark {
   justify-content: center;
   align-items: center;
 }
+
+.portfolio__carousel-container video {
+  width: 100%;
+  margin: auto;
+}
+
+.main__portfolio-cinemagraphic-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.portfolio__carousel__button-prev,
+.portfolio__carousel__button-next {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2rem;
+  color:rgb(0, 0, 0);
+}
+
 
 .bio__container {
   height: 100vh;
@@ -312,9 +345,9 @@ li.fade{
     padding: 1.2rem;
   }
 
-  .main__portfolio-text {
+  /* .main__portfolio-text {
   max-width: 15rem;
-  }
+  } */
 
   .main__portfolio {
     flex-direction: row;
@@ -377,11 +410,6 @@ li.fade{
     max-width: 25rem;
     flex-direction: column;
     }
-
-  .portfolio__content img {
-    width: 80%;
-    margin: 0 10px 10px 10px;
-  }
 
   .bio__big-letters {
     grid-area: 3 / 1 / 5 / 10;

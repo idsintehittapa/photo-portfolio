@@ -16,7 +16,7 @@
       <ul class="site__nav-list">
         <li><a class="site__nav-link" href="/">Home</a></li>
         <li><a class="site__nav-link" href="/portfolio.html">Portfolio</a></li>
-        <li><a class="site__nav-link"  href="/bio.html">Bio</a></li>
+        <li><a class="site__nav-link" href="/bio.html">Bio</a></li>
         <li><a class="site__nav-link" href="/">Contact</a></li>
         <li><a class="site__nav-link" href="/"><img class="site_logo" src="./assets/instagram.png"
               alt="instagram logo"></a></li>
@@ -28,13 +28,14 @@
 
   <main class="main__portfolio-cinemagraphic">
     <div class="main__portfolio__cinemagraphic-text">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.</p>
       <div class="main__portfolio-links">
-      <button> Art 'til death <span alt="arrow down">⬇</span></button>
+        <button> Art 'til death <span alt="arrow down">⬇</span></button>
         <ul>
-        <li><a href="/cinemagraph.html">Cinemagraph</a></li>
-        <li><a href="">Teeth</a></li>
-        <li><a href="/portfolio.html">Dear Person</a></li>
+          <li><a href="/cinemagraph.html">Cinemagraph</a></li>
+          <li><a href="">Teeth</a></li>
+          <li><a href="/portfolio.html">Dear Person</a></li>
         </ul>
       </div>
     </div>
@@ -42,12 +43,39 @@
       <h1 class="heading__portfolio">
         <mark>Cinemagraph</mark>
       </h1>
-      <div class="portfolio__item">
-        <div class="portfolio__content">
-          <video src="./assets/Cinemagraph2.mp4" autoplay loop></video>
+
+      <div class="portfolio__carousel-container">
+        <div class="portfolio__carousel-slide">
+          <video id='lastClone' autoplay loop>
+            <source src="./assets/Cinemagraph3.mov" type="video/mp4" /> Your browser does not support the video tag.
+          </video>
+
+          <video autoplay loop>
+            <source src="./assets/Cinemagraph2.mp4" type="video/mp4" /> Your browser does not support the video tag.
+          </video>
+
+          <video autoplay loop>
+            <source src="./assets/Cinemagraph5.mov" type="video/mp4" /> Your browser does not support the video tag.
+          </video>
+
+          <video autoplay loop>
+            <source src="./assets/Cinemagraph4.mov" type="video/mp4" /> Your browser does not support the video tag.
+          </video>
+
+          <video autoplay loop>
+            <source src="./assets/Cinemagraph3.mov" type="video/mp4" /> Your browser does not support the video tag.
+          </video>
+
+          <video id="firstClone" autoplay loop>
+            <source src="./assets/Cinemagraph2.mp4" type="video/mp4" /> Your browser does not support the video tag.
+          </video>
         </div>
       </div>
-        </section>
+      <div main__portfolio-cinemagraphic-buttons>
+        <button class="portfolio__carousel__button-prev" id="prevBtn"> ← </button>
+        <button class="portfolio__carousel__button-next" id="nextBtn"> → </button>
+      </div>
+    </section>
   </main>
 
   <script src="./app.js"></script>
