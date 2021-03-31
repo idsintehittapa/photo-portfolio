@@ -68,19 +68,30 @@ body {
 
 .main,
 .main__portfolio {
-  /* padding: 5rem 0; */
-  padding: 5rem 5rem 5rem 0;
+  padding: 2rem 5rem 5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* width: 100%; */
+}
+
+.main__portfolio-cinemagraphic {
+  padding: 2rem 5rem 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .main__portfolio {
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
+}
+
+.main__portfolio-links {
+  text-align: right;
 }
 
 .portfolio__masonry {
@@ -94,7 +105,6 @@ body {
 .container {
   position: relative;
   max-width: 350px;
-  /* margin: 2rem; */
 }
 
 .heading {
@@ -126,7 +136,6 @@ mark {
 
 .site__main--img-wrapper img {
   width: 100%;
-  /* margin: 0 10px 10px 10px; */
 }
 
 .site_main--img-polaroid {
@@ -135,20 +144,16 @@ mark {
   box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.5);
 }
 
-/* this does nothing */
-/* .site_main--img {
-  width: 100%;
-  height: auto;
-} */
-
-.main__portfolio-text{
+.main__portfolio-text,
+.main__portfolio__cinemagraphic-text {
   padding: 1rem;
   text-align: left;
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.portfolio__content img {
+.portfolio__content img,
+.portfolio__content video {
   width: 100%;
   margin: 0 10px 10px 10px;
   display: flex;
@@ -204,17 +209,79 @@ mark {
 }
 
 
-.bio__metadata a{
+.bio__metadata a,
+.main__portfolio-links a,
+.main__portfolio-links button {
   font-weight: 900;
   text-decoration: none;
   color:rgb(251, 119, 240);
 }
 
-.bio__metadata a:hover {
+.bio__metadata a:hover,
+.main__portfolio-links button:hover {
   font-weight: 100;
   text-decoration: underline;
   color: #000;
 }
+
+.main__portfolio-links a:hover {
+  font-weight: 100;
+  text-decoration: underline;
+  color: rgb(247, 247, 247)
+}
+
+.main__portfolio-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 1rem 0 0;
+  position: relative;
+}
+
+.main__portfolio-links  ul {
+  background-color: rgba(0,0,0,1);
+  padding: 2rem;
+  clip-path: circle(10px at 90% -10%);
+  -webkit-background-clip: circle(10px at 90% -10%);
+  transition: all 1s ease-out;
+  pointer-events: none;
+}
+
+.main__portfolio-links ul.open {
+  clip-path: circle(250px at 90% -10%);
+  -webkit-background-clip: circle(250px at 90% -10%);
+  transition: all 1s ease-out;
+  pointer-events: all;
+}
+
+.main__portfolio-links button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main__portfolio-links ul {
+  list-style: none;
+}
+
+.main__portfolio-links li {
+  text-align: right;
+  opacity: 0;
+}
+.main__portfolio-links li:nth-child(1) {
+  transition: all 0.5s ease 0.2s;
+}
+.main__portfolio-links li:nth-child(2) {
+  transition: all 0.5s ease 0.4s;
+}
+.main__portfolio-links li:nth-child(3) {
+  transition: all 0.5s ease 0.6s;
+}
+
+li.fade{
+  opacity: 1;
+}
+
 
 @media screen and (min-width: 40rem) {
   .heading {
@@ -225,6 +292,16 @@ mark {
 
   .heading__portfolio {
     font-size: 2rem;
+  }
+
+  .main__portfolio-cinemagraphic {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__portfolio__cinemagraphic-text {
+    display: flex;
+    padding: 2rem;
   }
 
   .container {
@@ -241,6 +318,7 @@ mark {
 
   .main__portfolio {
     flex-direction: row;
+    padding: 5rem 5rem 5rem 0;
   }
 
   .portfolio__masonry {
@@ -290,8 +368,14 @@ mark {
     grid-row-gap: 10em;
   }
 
-  .main__portfolio-text {
+  .main__portfolio-cinemagraphic {
+    flex-direction: row;
+    }
+
+  .main__portfolio-text,
+  .main__portfolio__cinemagraphic-text {
     max-width: 25rem;
+    flex-direction: column;
     }
 
   .portfolio__content img {
