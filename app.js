@@ -14,6 +14,9 @@ arrow.addEventListener('click', () => {
 
 
 // Carousel-slider Cinemagrah
+
+// document.getElementById('vid').play(); 
+
 const carouselSlide = document.querySelector('.portfolio__carousel-slide')
 const carouselVideo = document.querySelectorAll('.portfolio__carousel-slide video')
 
@@ -49,7 +52,7 @@ prevBtn.addEventListener('click', () => {
 carouselSlide.addEventListener('transitionend', () => {
   if (carouselVideo[counter].id === "lastClone") {
     carouselSlide.style.transition = "none"
-    counter = carouselVideo.length - 2
+    counter = carouselVideo.length - 1
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'
   }
   if (carouselVideo[counter].id === "firstClone") {
