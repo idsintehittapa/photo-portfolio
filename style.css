@@ -388,10 +388,6 @@ li.fade{
     grid-row-gap: 4em;
   }
 
-  .portfolio__carousel-container video {
-    padding: 0;
-  }
-
   .bio__big-letters {
     grid-area: 2 / 1 / 5 / 9;
     font-size: 5rem;
