@@ -13,6 +13,9 @@
 <body>
   <header class="site__header">
     <nav class="site__nav">
+      <div class="site__nav-wrapper">
+        <button class="site__nav-button">+</button>
+      </div>
       <ul class="site__nav-list">
         <li><a class="site__nav-link" href="/">Home</a></li>
         <li><a class="site__nav-link" href="/portfolio.html">Portfolio</a></li>
@@ -31,7 +34,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.</p>
       <div class="main__portfolio-links">
-        <button> Art 'til death <span alt="arrow down">⬇</span></button>
+        <button class="main__portfolio_button"> Art 'til death <span alt="arrow down">⬇</span></button>
         <ul>
           <li><a href="/cinemagraph.html">Cinemagraph</a></li>
           <li><a href="">Teeth</a></li>
@@ -39,6 +42,7 @@
         </ul>
       </div>
     </div>
+    
     <section class="portfolio__cinemagraph">
       <h1 class="heading__portfolio">
         <mark>Cinemagraph</mark>
@@ -71,6 +75,7 @@
           </video>
         </div>
       </div>
+
       <div class= "main__portfolio-cinemagraphic-buttons">
         <button class="portfolio__carousel__button-prev" id="prevBtn"> ← </button>
         <button class="portfolio__carousel__button-next" id="nextBtn"> → </button>
@@ -79,6 +84,7 @@
   </main>
 
   <script src="./app.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </body>
 
 </html>
