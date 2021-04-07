@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   font-size: 16px;
   font-family: 'IBM Plex Mono', monospace;
@@ -20,20 +21,10 @@ body {
   margin: 0 auto;
 }
 
+
 .site__header {
   display: flex;
   position: absolute;
-  top: 0;
-  right: 1.25rem;
-  writing-mode: vertical-rl;
-  height: 100%;
-  padding: 1.25rem 0;
-  z-index: 2;
-}
-
-.site__header > * {
-  flex: 1 1 auto;
-  padding-bottom: .625rem;
 }
 
 .site__nav {
@@ -41,18 +32,31 @@ body {
   margin: 0 0 3rem 0;
 }
 
-.site__nav-list {
-  justify-content: space-between;
-  list-style-type: none;
-  display: none;
-}
-
 .site__nav-button {
-  color:rgb(251, 119, 240);
+  color: #000;
   background-color: transparent;
   cursor: pointer;
   border: none;
   font-size: 2rem;
+  margin-left: 1rem;
+  position: absolute;
+  z-index: 2;
+}
+
+.site__nav-list {
+  list-style-type: none;
+  height: 50vh;
+  width: 100vmin;
+  background-color: rgb(251, 119, 240);
+  clip-path: circle(50px at 4% -13%);
+  -webkit-clip-path: circle(50px at 4% -13%);
+  transition: all 0.7s ease-out;
+}
+
+.site__nav-list.open {
+  background-color: rgb(251, 119, 240);
+  clip-path: circle(400px at 4% -13%);
+  -webkit-clip-path: circle(400px at 4% -13%);
 }
 
 .site__nav-link {
@@ -62,9 +66,13 @@ body {
   padding-bottom: .625rem;
 }
 
-.site__nav-list li:last-child .site__nav-link {
-  padding-bottom: 0;
+.site__nav-list li {
+  margin: 1rem;
 }
+
+/* .site__nav-list li:last-child .site__nav-link {
+  padding-bottom: 0;
+} */
 
 .site_logo{
   height: 1.5rem;
@@ -82,11 +90,6 @@ body {
 
 
 .main__portfolio-cinemagraphic {
-  /* padding: 2rem 5rem 5rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   min-height: 100vh;
 }
 
@@ -99,7 +102,6 @@ body {
 .main__portfolio-links {
   text-align: right;
   z-index: 2;
-  /* position: absolute; */
 }
 
 .portfolio__masonry {
@@ -158,7 +160,11 @@ mark {
   margin-top: 2rem;
   text-align: left;
   line-height: 2rem;
-  /* flex-direction: column; */
+}
+
+.main__portfolio-text p,
+.main__portfolio__cinemagraphic-text p {
+  margin-top: 2rem;
 }
 
 .portfolio__carousel-container {
@@ -282,14 +288,14 @@ mark {
   background-color: rgba(0,0,0,1);
   padding: 2rem;
   clip-path: circle(10px at 90% -10%);
-  -webkit-background-clip: circle(10px at 90% -10%);
+  -webkit-clip-path: circle(10px at 90% -10%);
   transition: all 1s ease-out;
   pointer-events: none;
 }
 
 .main__portfolio-links ul.open {
   clip-path: circle(250px at 90% -10%);
-  -webkit-background-clip: circle(250px at 90% -10%);
+  -webkit-clip-path: circle(250px at 90% -10%);
   transition: all 1s ease-out;
   pointer-events: all;
 }
@@ -331,7 +337,42 @@ li.fade{
   }
 
   .site__header {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 1.25rem;
+    writing-mode: vertical-rl;
+    height: 100%;
+    padding: 1.25rem 0;
+    z-index: 2;
+  }
+
+  .site__header > * {
+    flex: 1 1 auto;
+    padding-bottom: .625rem;
+  }
+
+  .site__nav-list {
     position: fixed;
+    top: 0;
+    right: 1.25rem;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    width: 2rem;
+    height: 100vh;
+    clip-path: none;
+    background: transparent;
+  }
+
+  .site__nav-link.open {
+    position: fixed;
+    height: 100%;
+  }
+
+  .site__nav-list li {
+    margin: 0;
   }
 
   .main__portfolio-cinemagraphic {
@@ -344,10 +385,6 @@ li.fade{
 
   .site__nav-wrapper {
     display: none;
-  }
-
-  .site__nav-list{
-    display: flex;
   }
 
   .heading__portfolio {
@@ -366,7 +403,7 @@ li.fade{
   }
 
   .portfolio__carousel-container {
-    width: 60%;
+    width: 80%;
   }
 
   .container {
