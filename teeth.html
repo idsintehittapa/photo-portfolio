@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cinemagraph</title>
+  <title>Teeth</title>
   <link rel="stylesheet" href="./style.css" />
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400&display=swap" rel="stylesheet">
 </head>
@@ -33,7 +33,7 @@
 
   <main class="main__portfolio-cinemagraphic">
     <div class="main__portfolio-text">
-      <p> The content of this page has been made for this made-up portfolio to show an image carousel made with vanilla JavaScript. The cinemagraphs showcased are, however, created by me. The original videos are from Pexels.</p>
+      <p>The content of this page has been made for this made-up portfolio to show a slider made with vanilla JavaScript. The after image are, however, edited by me. The original/before image is from Pexels.</p>
       <div class="main__portfolio-links">
         <button class="main__portfolio_button"> Art 'til death <span alt="arrow down">⬇</span></button>
         <ul>
@@ -46,46 +46,21 @@
     
     <section class="portfolio__cinemagraph">
       <h1 class="heading__portfolio">
-        <mark>Cinemagraph</mark>
+        <mark>Teeth</mark>
       </h1>
-
-      <div class="portfolio__carousel-container">
-        <div class="portfolio__carousel-slide">
-          <video id='lastClone' autoplay muted loop>
-            <source src="./assets/Cinemagraph3.mov" type="video/mp4" /> Your browser does not support the video tag.
-          </video>
-
-          <video autoplay muted loop>
-            <source src="./assets/Cinemagraph2.mp4" type="video/mp4" /> Your browser does not support the video tag.
-          </video>
-
-          <video autoplay muted loop>
-            <source src="./assets/Cinemagraph5.mov" type="video/mp4" /> Your browser does not support the video tag.
-          </video>
-
-          <video autoplay muted loop>
-            <source src="./assets/Cinemagraph4.mov" type="video/mp4" /> Your browser does not support the video tag.
-          </video>
-
-          <video autoplay muted loop>
-            <source src="./assets/Cinemagraph3.mov" type="video/mp4" /> Your browser does not support the video tag.
-          </video>
-
-          <video id="firstClone" autoplay muted loop>
-            <source src="./assets/Cinemagraph2.mp4" type="video/mp4" /> Your browser does not support the video tag.
-          </video>
+      <div class="teeth__container">
+        <div class="teeth__img-before">
+          <img class="before" src="./assets/teeth.png" alt="original teeth">
         </div>
+        <div class="teeth__img-after">
+          <img class="after" src="./assets/teeth_modified.png" alt="modified teeth">
+        </div>
+        <div class="slider"></div>
       </div>
-
-      <div class= "main__portfolio-cinemagraphic-buttons">
-        <button class="portfolio__carousel__button-prev" id="prevBtn"> ← </button>
-        <button class="portfolio__carousel__button-next" id="nextBtn"> → </button>
-      </div>
-    </section>
+      </section>
   </main>
 
   <script src="./app.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </body>
 
 </html>

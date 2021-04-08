@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
 }
 
 
@@ -49,8 +51,8 @@ body {
   height: 50vh;
   width: 100vmin;
   background-color: rgb(251, 119, 240);
-  clip-path: circle(50px at 4% -13%);
-  -webkit-clip-path: circle(50px at 4% -13%);
+  clip-path: circle(35px at 4% -13%);
+  -webkit-clip-path: circle(35px at 4% -13%);
   transition: all 0.7s ease-out;
   z-index: 2;
 }
@@ -170,6 +172,13 @@ mark {
   margin-top: 2rem;
 }
 
+.portfolio__cinemagraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 .portfolio__carousel-container {
   margin: auto;
   width: 100%;
@@ -204,6 +213,43 @@ mark {
   cursor: pointer;
   font-size: 2rem;
   color:rgb(0, 0, 0);
+}
+
+.teeth__container img {
+  width: 95vw;
+  height: 40vh;
+  max-height: 40vh;
+  object-fit: cover;
+}
+
+.teeth__container {
+  position: relative;
+  width: 95vw;
+  height: 40vh;
+  max-height: 40vh;
+}
+
+.teeth__img-before,
+.teeth__img-after {
+  position: absolute;
+  width: 95vw;
+}
+
+.teeth__img-after {
+  width: 47.5vw;
+  overflow: hidden;
+}
+
+.slider {
+  width: 0.5rem;
+  background: #fff;
+  height: 100%;
+  z-index: 3;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  pointer-events: none;
 }
 
 
@@ -390,10 +436,6 @@ li.fade{
     font-size: 2rem;
   }
 
-  .portfolio__cinemagraph {
-    /* height: 100vh; */
-  }
-
   .main__portfolio-cinemagraphic {
     display: flex;
     flex-direction: column;
@@ -407,6 +449,7 @@ li.fade{
 
   .portfolio__content img {
     padding: 1rem;
+    object-fit: cover;
   }
 
   .portfolio__carousel-container {
@@ -430,6 +473,26 @@ li.fade{
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 0.6em;
     grid-row-gap: 4em;
+  }
+
+  .teeth__container {
+    width: 75vw;
+    height: 60vw;
+    max-height: 45vh;
+  }
+
+  .teeth__img-before,
+  .teeth__img-after {
+    width: 75vw;
+}
+
+  .teeth__container img {
+    width: 75vw;
+    max-height: 45vh;
+  }
+
+  .teeth__img-after {
+    width: 37.5vw;
   }
 
   .bio__big-letters {
@@ -471,6 +534,27 @@ li.fade{
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 0.6em;
     grid-row-gap: 10em;
+  }
+
+  .teeth__container {
+    width: 55vw;
+    height: 45vh;
+    max-height: 45vh;
+  }
+
+  .teeth__img-before,
+  .teeth__img-after {
+  width: 55vw;
+}
+
+  .teeth__container img {
+    width: 55vw;
+    height: 45vh;
+    max-height: 45vh;
+  }
+
+  .teeth__img-after {
+    width: 27.5vw;
   }
 
   .bio__big-letters {
