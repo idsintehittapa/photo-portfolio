@@ -19,6 +19,7 @@ body {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
+  max-width: 1300px;
 }
 
 
@@ -40,7 +41,7 @@ body {
   font-size: 2rem;
   margin-left: 1rem;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 
 .site__nav-list {
@@ -51,12 +52,14 @@ body {
   clip-path: circle(50px at 4% -13%);
   -webkit-clip-path: circle(50px at 4% -13%);
   transition: all 0.7s ease-out;
+  z-index: 2;
 }
 
 .site__nav-list.open {
   background-color: rgb(251, 119, 240);
   clip-path: circle(400px at 4% -13%);
   -webkit-clip-path: circle(400px at 4% -13%);
+  z-index: 2;
 }
 
 .site__nav-link {
@@ -79,9 +82,8 @@ body {
   width: 1.5rem;
 }
 
-.main,
-.main__portfolio {
-  padding: 2rem 5rem 5rem 0;
+.main {
+  /* padding: 2rem 5rem 5rem 0; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +91,8 @@ body {
 }
 
 
-.main__portfolio-cinemagraphic {
+.main__portfolio-cinemagraphic,
+.main__portfolio  {
   min-height: 100vh;
 }
 
@@ -107,9 +110,11 @@ body {
 .portfolio__masonry {
   display: grid; 
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2em;
+  grid-gap: 2.3em;
   grid-auto-rows: 200px;
   max-width: 1200px;
+  padding: 1rem;
+  margin-bottom: 3rem;
 }
 
 .container {
@@ -154,16 +159,14 @@ mark {
   box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.5);
 }
 
-.main__portfolio-text,
-.main__portfolio__cinemagraphic-text {
+.main__portfolio-text {
   padding: 1rem;
   margin-top: 2rem;
   text-align: left;
   line-height: 2rem;
 }
 
-.main__portfolio-text p,
-.main__portfolio__cinemagraphic-text p {
+.main__portfolio-text p {
   margin-top: 2rem;
 }
 
@@ -180,11 +183,7 @@ mark {
 
 .portfolio__content img {
   width: 100%;
-  margin: 0 10px 10px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* margin: 0 10px 10px 10px; */
 }
 
 .portfolio__carousel-container video {
@@ -391,15 +390,23 @@ li.fade{
     font-size: 2rem;
   }
 
+  .portfolio__cinemagraph {
+    /* height: 100vh; */
+  }
+
   .main__portfolio-cinemagraphic {
     display: flex;
     flex-direction: column;
   }
 
-  .main__portfolio__cinemagraphic-text {
+  .main__portfolio-text {
     display: flex;
     padding: 2rem;
     margin-top: 0;
+  }
+
+  .portfolio__content img {
+    padding: 1rem;
   }
 
   .portfolio__carousel-container {
@@ -465,16 +472,6 @@ li.fade{
     grid-column-gap: 0.6em;
     grid-row-gap: 10em;
   }
-
-  .main__portfolio-cinemagraphic {
-    flex-direction: row;
-    }
-
-  .main__portfolio-text,
-  .main__portfolio__cinemagraphic-text {
-    max-width: 25rem;
-    flex-direction: column;
-    }
 
   .bio__big-letters {
     grid-area: 3 / 1 / 5 / 10;
