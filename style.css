@@ -12,6 +12,7 @@ html {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 300;
   line-height: 1.25;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,7 +44,7 @@ body {
   font-size: 2rem;
   margin-left: 1rem;
   position: absolute;
-  z-index: 3;
+  z-index: 5;
 }
 
 .site__nav-list {
@@ -61,7 +62,7 @@ body {
   background-color: rgb(251, 119, 240);
   clip-path: circle(400px at 4% -13%);
   -webkit-clip-path: circle(400px at 4% -13%);
-  z-index: 2;
+  z-index: 4;
 }
 
 .site__nav-link {
@@ -153,6 +154,9 @@ mark {
 
 .site__main--img-wrapper img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
 }
 
 .site_main--img-polaroid {
@@ -192,7 +196,14 @@ mark {
 
 .portfolio__content img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
   /* margin: 0 10px 10px 10px; */
+}
+
+.portfolio__content img:hover {
+  transform: scale(2.5);
 }
 
 .portfolio__carousel-container video {
@@ -407,6 +418,11 @@ li.fade{
     display: flex;
     width: 2rem;
     height: 100vh;
+    clip-path: none;
+    background: transparent;
+  }
+
+  .site__nav-list.open {
     clip-path: none;
     background: transparent;
   }
