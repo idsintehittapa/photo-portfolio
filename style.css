@@ -36,6 +36,7 @@ footer {
 .site__header {
   display: flex;
   position: absolute;
+  margin-top: 2rem;
 }
 
 .site__nav {
@@ -102,6 +103,22 @@ footer {
 
 .main__portfolio-links span {
   font-size: 3rem;
+  animation: span 2.5s linear infinite;
+}
+
+@keyframes span{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 .main__portfolio-links span:hover {
@@ -197,25 +214,24 @@ mark {
 
 .main__portfolio-text {
   padding: 1rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   text-align: left;
   line-height: 2rem;
 }
 
 .main__portfolio-text p {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .portfolio__cinemagraph {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
 }
 
 .portfolio__carousel-container {
   margin: auto;
-  width: 100%;
+  height: fit-content;
+  /* width: 100%; */
   overflow: hidden;
 }
 
@@ -238,6 +254,7 @@ mark {
 
 .portfolio__carousel-container video {
   width: 100%;
+  height: 20rem;
   margin: auto;
   padding: 0 0.5rem;
 }
@@ -333,7 +350,7 @@ mark {
 }
 
 .bio__metadata {
-  grid-area: 10 / 6 / 1 / 12;
+  grid-area: 10 / 6 / 1 / 13;
   font-size: 1rem;
   text-align: right;
   align-self: end;
@@ -343,7 +360,8 @@ mark {
 
 .bio__metadata a,
 .main__portfolio-links a,
-.main__portfolio-links button {
+.main__portfolio-links button,
+.contact__big-text a {
   font-weight: 900;
   text-decoration: none;
   color:rgb(251, 119, 240);
@@ -351,9 +369,9 @@ mark {
 
 
 .bio__metadata a:hover,
-.main__portfolio-links button:hover {
+.main__portfolio-links button:hover,
+.contact__big-text a:hover {
   font-weight: 100;
-  /* text-decoration: underline; */
   color: #000;
 }
 
@@ -389,7 +407,7 @@ mark {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 1rem 0 0;
+  /* margin: 1rem 0 0; */
   position: relative;
 }
 
@@ -437,6 +455,52 @@ li.fade{
   opacity: 1;
 }
 
+/* Contact  */
+.contact__big-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  font-size: 2rem;
+}
+
+.contact__intro {
+  background: rgb(251, 119, 240);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__intro-text {
+  color: rgb(2, 1, 1);
+  font-size: 1.5rem;
+}
+
+.contact__intro__text-hide {
+  background: rgb(251, 119, 240);
+  overflow: hidden;
+}
+
+.contact__intro__text-visible {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+.contact__slider {
+  /* background: rgb(2, 1, 1); */
+  background: radial-gradient(50% 50% at 50% 50%, rgba(247, 247, 247, 0.9) 0%, rgba(232, 232, 232, 0.9) 100%), #9a9a9a;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
 
 @media screen and (min-width: 40rem) {
   .heading {
@@ -494,7 +558,6 @@ li.fade{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
   }
 
   .site__nav-wrapper {
@@ -503,6 +566,10 @@ li.fade{
 
   .heading__portfolio {
     font-size: 2rem;
+  }
+
+  .main__portfolio-text p {
+    margin-top: 0;
   }
 
   .main__portfolio-cinemagraphic {
@@ -535,7 +602,7 @@ li.fade{
 
   .main__portfolio {
     flex-direction: row;
-    padding: 5rem 5rem 5rem 0;
+    padding: 2rem 5rem 5rem 0;
   }
 
   .portfolio__masonry {
@@ -564,6 +631,10 @@ li.fade{
     width: 37.5vw;
   }
 
+  .portfolio__carousel-container video {
+    height: 25rem;
+  }
+
   .bio__big-letters {
     grid-area: 2 / 1 / 5 / 9;
     font-size: 5rem;
@@ -579,6 +650,13 @@ li.fade{
   .bio__metadata {
     grid-area: 1 / 10 / 10 / 13;
   }
+
+  .contact__big-text {
+    font-size: 3rem;
+    top: 40%;
+    transform: translate(-55%, -40%);
+  }
+  
 }
 
 @media screen and (min-width: 60rem) {
@@ -624,6 +702,11 @@ li.fade{
 
   .teeth__img-after {
     width: 27.5vw;
+  }
+
+
+  .portfolio__carousel-container video {
+    height: 35rem;
   }
 
   .bio__big-letters {
