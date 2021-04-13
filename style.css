@@ -83,7 +83,7 @@ footer {
 }
 
 .site__nav-list li {
-  margin: 1rem;
+  margin: 1.3rem 1rem;
 }
 
 /* .site__nav-list li:last-child .site__nav-link {
@@ -163,14 +163,12 @@ footer {
   font-size: 1.2rem;
   line-height: 1em;
   width: 2.5em;
-}
-
-.scrollToTopBtn span {
-  margin: auto;
+  text-align: center;
 }
 
 .scrollToTopBtn:hover {
   background-color: #000;
+  color:#FFF;
 }
 
 .container {
