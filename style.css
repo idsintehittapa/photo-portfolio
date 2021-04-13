@@ -51,8 +51,8 @@ footer {
   border: none;
   font-size: 2rem;
   top: -5%;
-  left: 2%;
-  transform: translate(-0%, 0%);
+  left: 0%;
+  /* transform: translate(-0%, 0%); */
   position: absolute;
   z-index: 5;
   display: inline-block;
