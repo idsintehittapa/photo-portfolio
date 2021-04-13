@@ -50,11 +50,12 @@ footer {
   cursor: pointer;
   border: none;
   font-size: 2rem;
-  top: -5;
+  top: -5%;
   left: 2%;
   transform: translate(-0%, 0%);
   position: absolute;
   z-index: 5;
+  display: inline-block;
 }
 
 .site__nav-list {
@@ -163,6 +164,7 @@ footer {
   font-size: 1.2rem;
   line-height: 1em;
   width: 2.5em;
+  display:inline-block;
   text-align: center;
 }
 
