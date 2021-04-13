@@ -50,7 +50,9 @@ footer {
   cursor: pointer;
   border: none;
   font-size: 2rem;
-  margin-left: 1rem;
+  top: -5;
+  left: 2%;
+  transform: translate(-0%, 0%);
   position: absolute;
   z-index: 5;
 }
@@ -161,6 +163,10 @@ footer {
   font-size: 1.2rem;
   line-height: 1em;
   width: 2.5em;
+}
+
+.scrollToTopBtn span {
+  margin: auto;
 }
 
 .scrollToTopBtn:hover {
