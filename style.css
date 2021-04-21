@@ -2,8 +2,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* margin: 0;
-  padding: 0; */
 }
 
 
@@ -30,7 +28,6 @@ footer {
   display: flex;
   justify-content: flex-start;
   margin: 0 0 2rem 2rem;
-  /* padding: 5rem 5rem 5rem 0; */
 }
 
 .site__header {
@@ -52,7 +49,6 @@ footer {
   font-size: 2rem;
   top: -5%;
   left: 0%;
-  /* transform: translate(-0%, 0%); */
   position: absolute;
   z-index: 5;
   display: inline-block;
@@ -87,17 +83,12 @@ footer {
   margin: 1.3rem 1rem;
 }
 
-/* .site__nav-list li:last-child .site__nav-link {
-  padding-bottom: 0;
-} */
-
 .site_logo{
   height: 1.5rem;
   width: 1.5rem;
 }
 
 .main {
-  /* padding: 2rem 5rem 5rem 0; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,7 +212,6 @@ mark {
 
 .main__portfolio-text {
   padding: 1rem;
-  /* margin-top: 2rem; */
   text-align: left;
   line-height: 2rem;
 }
@@ -254,7 +244,6 @@ mark {
   height: 100%;
   object-fit: cover;
   cursor: pointer;
-  /* margin: 0 10px 10px 10px; */
 }
 
 .portfolio__content img:hover {
@@ -266,6 +255,13 @@ mark {
   height: 100%;
   margin: auto;
   padding: 0 0.5rem;
+}
+
+@supports (-moz-appearance: none) {
+  .portfolio__carousel-container video {
+    width: auto;
+    max-width: 100%
+  }
 }
 
 .main__portfolio-cinemagraphic-buttons {
@@ -323,7 +319,6 @@ mark {
 .bio__container {
   height: 100vh;
   display: flex;
-  /* overflow: hidden; */
   max-width: 1200px;
 }
 
@@ -337,13 +332,10 @@ mark {
 }
 
 .bio__big-letters {
-  /* grid-area: 3 / 1 / 5 / 10; */
   grid-area: 1 / 1 / 2 / 5;
   color:rgba(251, 119, 240, 0.7);
-  /* font-size: 2.4rem; */
   font-size: 10.76vmin;
   line-height: 11.75vmin;
-  /* line-height: 0.75; */
   text-align: center;
   letter-spacing: -0.85vmin;
 }
@@ -416,7 +408,6 @@ mark {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  /* margin: 1rem 0 0; */
   position: relative;
 }
 
@@ -501,7 +492,6 @@ li.fade{
 }
 
 .contact__slider {
-  /* background: rgb(2, 1, 1); */
   background: radial-gradient(50% 50% at 50% 50%, rgba(247, 247, 247, 0.9) 0%, rgba(232, 232, 232, 0.9) 100%), #9a9a9a;
   position: fixed;
   top: 0;
@@ -640,9 +630,6 @@ li.fade{
     width: 37.5vw;
   }
 
-  .portfolio__carousel-container video {
-    /* height: 25rem; */
-  }
 
   .bio__big-letters {
     grid-area: 2 / 1 / 5 / 9;
